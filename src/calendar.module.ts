@@ -1,3 +1,7 @@
+
+import 'hammerjs';
+import { MaterialModule } from '@angular/material';
+
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ResizableModule } from 'angular-resizable-element';
@@ -65,7 +69,8 @@ import { CalendarDateFormatter } from './providers/calendarDateFormatter.provide
   imports: [
     CommonModule,
     ResizableModule,
-    DragAndDropModule
+    DragAndDropModule,
+    MaterialModule
   ],
   exports: [
     CalendarDayViewComponent,

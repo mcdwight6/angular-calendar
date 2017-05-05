@@ -10,8 +10,8 @@ import { CalendarEvent } from 'calendar-utils';
         href="javascript:;"
         *ngFor="let action of event.actions"
         (click)="action.onClick({event: event})"
-        [ngClass]="action.cssClass"
-        [innerHtml]="action.label">
+        [ngClass]="action.cssClass">
+        <md-icon>{{ action.label }}</md-icon>
       </a>
     </span>
   `

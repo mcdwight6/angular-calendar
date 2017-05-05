@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy, ViewChild, TemplateRef } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import {
   startOfDay,
   endOfDay,
@@ -52,12 +53,12 @@ export class DemoComponent {
   };
 
   actions: CalendarEventAction[] = [{
-    label: '<i class="fa fa-fw fa-pencil"></i>',
+    label: 'add_circle',
     onClick: ({event}: {event: CalendarEvent}): void => {
       this.handleEvent('Edited', event);
     }
   }, {
-    label: '<i class="fa fa-fw fa-times"></i>',
+    label: 'clear',
     onClick: ({event}: {event: CalendarEvent}): void => {
       this.events = this.events.filter(iEvent => iEvent !== event);
       this.handleEvent('Deleted', event);
@@ -97,7 +98,7 @@ export class DemoComponent {
 
   activeDayIsOpen: boolean = true;
 
-  constructor(private modal: NgbModal) {}
+  constructor(private modal: NgbModal, private sanitizer: DomSanitizer) {}
 
   dayClicked({date, events}: {date: Date, events: CalendarEvent[]}): void {
 
