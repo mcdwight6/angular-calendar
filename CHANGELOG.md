@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.14.1"></a>
+## [0.14.1](https://github.com/mattlewis92/angular-calendar/compare/v0.14.0...v0.14.1) (2017-05-06)
+
+
+### Bug Fixes
+
+* **monthView:** md-icons resolve properly ([036c004](https://github.com/mattlewis92/angular-calendar/commit/036c004))
+
+
+
 <a name="0.14.0"></a>
 # [0.14.0](https://github.com/mattlewis92/angular-calendar/compare/v0.13.6...v0.14.0) (2017-04-21)
 
